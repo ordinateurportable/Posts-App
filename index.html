@@ -7,7 +7,15 @@
     <title>Posts App</title>
 </head>
 <body>
-    <h1 class=""></h1>
+    <div class="bg-gray-950 min-h-screen flex justify-center flex-col items-center">
+        <form id="auth-form" class="border border-gray-50/50 rounded-xl flex flex-col w-full max-w-md p-10 pt-5 gap-4">
+            <h1 class="text-white mb-2 text-3xl">Авторизация</h1>
+            <!-- можно и email -->
+            <input id="auth-form-email" type="text" name="email" placeholder="Введите электропочту" class="border border-gray-50/50 rounded-md text-white px-3 py-2">
+            <input id="auth-form-password" type="password" name="password" placeholder="Введите пароль" class="border border-gray-50/50 rounded-md text-white px-3 py-2 disabled:opacity-50" disabled>
+            <input id="auth-form-submit" type="submit" value="Войти" class="rounded-md bg-blue-600 hover:bg-blue-800 text-white px-3 py-2 cursor-pointer">
+        </form>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
