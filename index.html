@@ -8,12 +8,24 @@
 </head>
 <body>
     <div class="bg-gray-950 min-h-screen flex justify-center flex-col items-center">
-        <form id="auth-form" class="border border-gray-50/50 rounded-xl flex flex-col w-full max-w-md p-10 pt-5 gap-4">
+        <form id="auth-form" class="border border-gray-50/50 rounded-xl flex flex-col w-full max-w-md p-10 pt-5 gap-2">
             <h1 class="text-white mb-2 text-3xl">Авторизация</h1>
             <!-- можно и email -->
-            <input id="auth-form-email" type="text" name="email" placeholder="Введите электропочту" class="border border-gray-50/50 rounded-md text-white px-3 py-2">
-            <input id="auth-form-password" type="password" name="password" placeholder="Введите пароль" class="border border-gray-50/50 rounded-md text-white px-3 py-2 disabled:opacity-50" disabled>
-            <input id="auth-form-submit" type="submit" value="Войти" class="rounded-md bg-blue-600 hover:bg-blue-800 text-white px-3 py-2 cursor-pointer">
+            
+           <div>
+                <input id="auth-form-email" type="text" name="email" placeholder="Введите электропочту" class="border border-gray-50/50 rounded-md text-white px-3 py-2 pl-12 bg-[url('./email-svgrepo-com-gray.svg')] bg-no-repeat bg-[left_4px_center] bg-[length:36px_36px] brightness-100 focus:bg-[url('./email-svgrepo-com-white.svg')] w-full">
+                <p id="email-error" class="text-red-600 text-xs mt-1 invisible">Проверьте почту</p>
+           </div>
+            <div class="relative">
+                <input id="auth-form-password" type="password" name="password" placeholder="Введите пароль" class="border border-gray-50/50 rounded-md text-white px-3 py-2 disabled:opacity-50 pl-12 bg-[url('./lock-gray.svg')] bg-no-repeat bg-[left_4px_center] bg-[length:36px_36px] focus:bg-[url('./lock-white.svg')] w-full" disabled>
+                <input id="show-password" type="checkbox" class="absolute right-3 top-1/3 -translate-y-1/3 w-5 h-5 appearance-none cursor-pointer 
+                bg-[url('https://api.iconify.design/ic:outline-remove-red-eye.svg?color=%23999999')] bg-no-repeat">
+   
+                <input id="hide-password" type="checkbox" class="hidden absolute right-3 top-1/3 -translate-y-1/3 w-5 h-5 appearance-none cursor-pointer 
+                bg-[url('https://api.iconify.design/ion:eye-off-outline.svg?color=%23999999')] bg-no-repeat">
+                <p id="password-error" class="text-red-600 text-xs mt-1 invisible">Пароль должен быть не короче четырёх символов и содержать числа, большие и маленькие буквы</p>
+            </div>
+            <input id="auth-form-submit" type="submit" value="Войти" class="rounded-md bg-blue-600 hover:bg-blue-800 text-white px-3 py-2 cursor-pointer disabled:opacity-45 disabled:bg-blue-700" disabled>
         </form>
     </div>
     <script src="script.js"></script>
