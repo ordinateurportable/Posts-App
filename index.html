@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Posts App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts app</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="checkAuth.js"></script>
 </head>
+
 <body>
-    <div class="bg-gray-950 min-h-screen flex justify-center flex-col items-center">
-        <form id="auth-form" class="border border-gray-50/50 rounded-xl flex flex-col w-full max-w-md p-10 pt-5 gap-2">
-            <h1 class="text-white mb-2 text-3xl">Авторизация</h1>
-            <!-- можно и email -->
-            
-           <div>
-                <input id="auth-form-email" type="text" name="email" placeholder="Введите электропочту" class="border border-gray-50/50 rounded-md text-white px-3 py-2 pl-12 bg-[url('./email-svgrepo-com-gray.svg')] bg-no-repeat bg-[left_4px_center] bg-[length:36px_36px] brightness-100 focus:bg-[url('./email-svgrepo-com-white.svg')] w-full" autofocus>
-                <p id="email-error" class="text-red-600 text-xs mt-1 invisible">Проверьте почту</p>
-           </div>
-            <div class="relative">
-                <input id="auth-form-password" type="password" name="password" placeholder="Введите пароль" class="border border-gray-50/50 rounded-md text-white px-3 py-2 disabled:opacity-50 pl-12 bg-[url('./lock-gray.svg')] bg-no-repeat bg-[left_4px_center] bg-[length:36px_36px] focus:bg-[url('./lock-white.svg')] w-full" disabled>
-                <button id="toggle-password-visibility" class="hidden absolute right-3 top-1/3 -translate-y-1/3 w-5 h-5 appearance-none cursor-pointer 
-                bg-no-repeat" style="background-image: url(https://api.iconify.design/ic:outline-remove-red-eye.svg?color=%23999999)" data-visibility = "false"></button>
-                <p id="password-error" class="text-red-600 text-xs mt-1 invisible">Пароль должен быть не короче четырёх символов и содержать числа, большие и маленькие буквы</p>
-            </div>
-            <input id="auth-form-submit" type="submit" value="Войти" class="rounded-md bg-blue-600 hover:bg-blue-800 text-white px-3 py-2 cursor-pointer disabled:opacity-45 disabled:bg-blue-700" disabled>
-        </form>
-    </div>
-    <script src="script.js"></script>
+  <div id="wrapper" class="bg-gray-950 min-h-screen flex justify-center flex-col items-center">
+
+
+
+  </div>
+
+
+  <div id="alert-error"
+    class="fixed bg-white border rounded-md right-12 bottom-12 p-4 pt-6 opacity-0 duration-700 transition-opacity">
+    <button id="alert-close" class="text-2xl absolute right-1 bottom-10 cursor-pointer hover:text-zinc-500">×</button>
+    <p class="font-bold">Пользователь не найден. <a id="registration-link-in-alert" class="text-blue-700 underline"
+        href="">Регистрация</a>
+    </p>
+  </div>
+  <script src="index.js"></script>
 </body>
+
 </html>

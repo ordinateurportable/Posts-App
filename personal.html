@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Personal page</title>
+</head>
+<body>
+    <div class="m-4">
+        <h1 class="text-3xl mb-2">Stepan Makarow</h1>
+        <div class="flex flex-col">
+            <div class="mb-2">
+                <h3>Какими технологиями вы владеете?</h3>
+                <div id="skills-wrapper" class="flex gap-1 mb-2 min-h-[34px]">
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <input type="checkbox" name="HTML" id="checkbox-html" class="w-4 h-4">
+                    <label for="checkbox-html" class="cursor-pointer">HTML</label>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <input type="checkbox" name="CSS" id="checkbox-css" class="w-4 h-4">
+                    <label for="checkbox-css" class="cursor-pointer">CSS</label>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <input type="checkbox" name="JS" id="checkbox-js" class="w-4 h-4">
+                    <label for="checkbox-js" class="cursor-pointer">JS</label>
+                </div>
+                <div class="flex flex-col w-fit">
+                    <textarea id="skill-textarea" class="border-1 rounded-md min-h-[34px] p-1 pl-2" placeholder="Добавьте здесь если нету в списке"></textarea>
+                    <button id="add-skill" class="border-2 border-blue-700 rounded-md p-1 m-1 pr-3 pl-3 text-white bg-blue-700 cursor-pointer w-full" >Добавить</button>
+                </div>
+            </div>
+
+            <form id="soc-net-form">
+                <fieldset>
+                    <h3>Добавьте сслыки на ваши соцсети:</h3>
+                    <input id="input-social-network" type="text" name="social-network" class="border-1 rounded-md p-1 m-1" placeholder="Соцсеть">
+                    <input id="input-link" type="url" name="link" class="border-1 rounded-md p-1 m-1" placeholder="Ссылка">
+                    <input id="submit" type="submit" value="Отправить" class="border-2 border-blue-700 rounded-md p-1 m-1 pr-3 pl-3 text-white bg-blue-700 cursor-pointer">
+                </fieldset>
+            </form>
+            <div id="links-wrapper" class="min-h-[28px]">
+                <a href="https://t.me/postimees" class="text-blue-700">Телеграм</a>
+            </div>
+            <p>https://t.me/postimees</p>
+        </div>
+        <div class="mt-2">
+            <h3>Расскажите что-нибудь о себе</h3>
+            <textarea class="border-1 rounded-md"></textarea>
+        </div>
+    </div>
+    <script src="personal.js"></script>
+</body>
+</html>
